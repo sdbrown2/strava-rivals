@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FRDStravaClientImports.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,11 @@
 
 @implementation AppDelegate
 
+NSString * const kAppSecret     = @"b015a60f6dde93d0be4646f422762ec024a97bb0";
+int kAppClientId                = 13793;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[FRDStravaClient sharedInstance] initializeWithClientId:kAppClientId clientSecret:kAppSecret];
     return YES;
 }
 
@@ -45,6 +48,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    [[FRDStravaClient sharedInstance] parseStravaAuthCallback:url
+                                                  withSuccess:^(NSString *stateInfo, NSString *code) {
+                                                      //get the view, finish token exchange
+                                                      
+                                                  }
+                                                      failure:^(NSString *stateInfo, NSString *error) {
+                                                          // show error
+                                                      }];
+    
+    return YES;
 }
 
 
