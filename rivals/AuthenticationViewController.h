@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AuthenticationViewController.h
 //  rivals
 //
 //  Created by Stephen on 9/27/16.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AuthenticationViewController : UIViewController
+
+-(void)exchangeTokenForCode:(NSString *)code;
 
 
 @end

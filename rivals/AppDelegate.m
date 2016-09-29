@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FRDStravaClientImports.h"
+#import "AuthenticationViewController.h"
 
 @interface AppDelegate ()
 
@@ -54,11 +55,14 @@ int kAppClientId                = 13793;
 {
     [[FRDStravaClient sharedInstance] parseStravaAuthCallback:url
                                                   withSuccess:^(NSString *stateInfo, NSString *code) {
+                                                      NSLog(@"Code success");
                                                       //get the view, finish token exchange
-                                                      
+                                                      AuthenticationViewController *vc = (AuthenticationViewController *)self.window.rootViewController;
+                                                      [vc exchangeTokenForCode:code];
                                                   }
                                                       failure:^(NSString *stateInfo, NSString *error) {
-                                                          // show error
+                                                          //show an alert
+                                                          NSLog(@"Code fail");
                                                       }];
     
     return YES;
