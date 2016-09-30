@@ -14,6 +14,8 @@
 		C073A2AE1D9AE7D700076DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C073A2AC1D9AE7D700076DB3 /* Main.storyboard */; };
 		C073A2B01D9AE7D700076DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C073A2AF1D9AE7D700076DB3 /* Assets.xcassets */; };
 		C073A2B31D9AE7D700076DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C073A2B11D9AE7D700076DB3 /* LaunchScreen.storyboard */; };
+		C073A2BC1D9EA9AC00076DB3 /* ProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C073A2BB1D9EA9AC00076DB3 /* ProfileModel.m */; };
+		C073A2BF1D9EAB5E00076DB3 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C073A2BE1D9EAB5E00076DB3 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		C073A2AF1D9AE7D700076DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C073A2B21D9AE7D700076DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C073A2B41D9AE7D700076DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C073A2BA1D9EA9AC00076DB3 /* ProfileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileModel.h; sourceTree = "<group>"; };
+		C073A2BB1D9EA9AC00076DB3 /* ProfileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileModel.m; sourceTree = "<group>"; };
+		C073A2BD1D9EAB5E00076DB3 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		C073A2BE1D9EAB5E00076DB3 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 				C073A2B11D9AE7D700076DB3 /* LaunchScreen.storyboard */,
 				C073A2B41D9AE7D700076DB3 /* Info.plist */,
 				C073A2A31D9AE7D600076DB3 /* Supporting Files */,
+				C073A2BA1D9EA9AC00076DB3 /* ProfileModel.h */,
+				C073A2BB1D9EA9AC00076DB3 /* ProfileModel.m */,
+				C073A2BD1D9EAB5E00076DB3 /* ProfileViewController.h */,
+				C073A2BE1D9EAB5E00076DB3 /* ProfileViewController.m */,
 			);
 			path = rivals;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 				C073A2AB1D9AE7D600076DB3 /* AuthenticationViewController.m in Sources */,
 				C073A2A81D9AE7D600076DB3 /* AppDelegate.m in Sources */,
 				C073A2A51D9AE7D600076DB3 /* main.m in Sources */,
+				C073A2BC1D9EA9AC00076DB3 /* ProfileModel.m in Sources */,
+				C073A2BF1D9EAB5E00076DB3 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

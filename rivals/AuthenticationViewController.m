@@ -36,7 +36,7 @@
     [[FRDStravaClient sharedInstance] exchangeTokenForCode:code
                                                    success:^(StravaAccessTokenResponse *response) {
                                                        NSLog(@"Exchange success");
-                                                       //segue to next view
+                                                       [self performSegueWithIdentifier:@"showProfile" sender:self];
                                                    } failure:^(NSError *error) {
                                                        NSLog(@"Exchange failure");
                                                        UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Alert" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];

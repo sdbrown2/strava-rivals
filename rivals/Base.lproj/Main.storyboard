@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,10 +43,65 @@
                             <constraint firstItem="Saa-W6-yGy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUK-hJ-Wj7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="CHI-VV-cBQ" kind="show" identifier="showProfile" id="Un6-Bw-c0K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="128.18590704647679"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="tiW-oH-O8l">
+            <objects>
+                <viewController id="CHI-VV-cBQ" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHc-r4-dIh"/>
+                        <viewControllerLayoutGuide type="bottom" id="90e-lM-jUp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iaF-vf-53a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athlete Fullname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-PD-ftr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3rN-ZM-7ws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiD-d1-o1A">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hbh-dG-OKt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RqV-Y0-JHK"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RqV-Y0-JHK" firstAttribute="leading" secondItem="iaF-vf-53a" secondAttribute="leading" constant="175" id="0w8-EM-3xI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JvF-PD-ftr" secondAttribute="trailing" constant="67" id="Q1G-IV-VHa"/>
+                            <constraint firstItem="BiD-d1-o1A" firstAttribute="leading" secondItem="iaF-vf-53a" secondAttribute="leadingMargin" constant="64" id="TcB-yE-bvN"/>
+                            <constraint firstItem="JvF-PD-ftr" firstAttribute="leading" secondItem="iaF-vf-53a" secondAttribute="leadingMargin" constant="60" id="gaw-1z-BAU"/>
+                            <constraint firstItem="BiD-d1-o1A" firstAttribute="centerX" secondItem="iaF-vf-53a" secondAttribute="centerX" id="hbf-M0-fxh"/>
+                            <constraint firstItem="RqV-Y0-JHK" firstAttribute="centerY" secondItem="iaF-vf-53a" secondAttribute="centerY" id="kAP-Ah-2DP"/>
+                            <constraint firstItem="JvF-PD-ftr" firstAttribute="top" secondItem="gHc-r4-dIh" secondAttribute="bottom" constant="57" id="w2u-VI-qwm"/>
+                            <constraint firstItem="BiD-d1-o1A" firstAttribute="top" secondItem="JvF-PD-ftr" secondAttribute="bottom" constant="8" symbolic="YES" id="yRh-e2-660"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="RqV-Y0-JHK" id="L4c-XJ-ylk"/>
+                        <outlet property="locationLabel" destination="BiD-d1-o1A" id="vJb-Wj-wN0"/>
+                        <outlet property="nameLabel" destination="JvF-PD-ftr" id="FKD-cS-jhJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0R-eY-CTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="127.28635682158921"/>
         </scene>
     </scenes>
     <resources>
