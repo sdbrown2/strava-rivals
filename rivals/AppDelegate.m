@@ -61,8 +61,11 @@ int kAppClientId                = 13793;
                                                       [vc exchangeTokenForCode:code];
                                                   }
                                                       failure:^(NSString *stateInfo, NSString *error) {
-                                                          //show an alert
                                                           NSLog(@"Code fail");
+                                                          UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Alert" message:error preferredStyle:UIAlertControllerStyleAlert];
+                                                          UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                                                          [errorAlert addAction:okAction];
+                                                          [self.window.rootViewController presentViewController:errorAlert animated:YES completion:nil];
                                                       }];
     
     return YES;

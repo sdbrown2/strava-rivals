@@ -39,7 +39,10 @@
                                                        //segue to next view
                                                    } failure:^(NSError *error) {
                                                        NSLog(@"Exchange failure");
-                                                       // show error
+                                                       UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Alert" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+                                                       UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                                                       [errorAlert addAction:okAction];
+                                                       [self presentViewController:errorAlert animated:YES completion:nil];
                                                    }];
 }
 
